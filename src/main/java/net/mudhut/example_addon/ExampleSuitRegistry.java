@@ -14,6 +14,7 @@ public class ExampleSuitRegistry {
     // Here's where you register your suits, first you define the model like so, and then you register
     // the normal, damaged, and withered textures, for the withering system the suits have
     public static final Supplier<AnimatronicSuit> BAG_FREDDY_SUIT = SUITS.register("bag_freddy_suit", () ->
-            new AnimatronicSuit(new BAGFreddySuitModel<>(BAGFreddySuitModel.createBodyLayer().bakeRoot()),
-                    FFPExample.resource("textures/model/bag_freddy.png"), FFPExample.resource("textures/model/bag_freddy.png"), FFPExample.resource("textures/model/bag_freddy.png")));
+            new AnimatronicSuit(FFPExample.resource("textures/model/bag_freddy.png"),
+                    FFPExample.resource("textures/model/bag_freddy_damaged.png"),
+                    FFPExample.resource("textures/model/bag_freddy_withered.png")));
 }

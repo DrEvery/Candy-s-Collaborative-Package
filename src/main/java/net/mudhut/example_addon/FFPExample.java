@@ -17,8 +17,11 @@ public class FFPExample {
 
     public FFPExample(IEventBus modEventBus, ModContainer modContainer) {
         RModRegistrar.registerSelf(MODID);
+        modEventBus.register(Registry.class);
         ExampleSuitRegistry.SUITS.register(modEventBus);
         ExampleItemRegistry.ITEMS.register(modEventBus);
+        ExampleCatalogTabs.CATALOG_TABS.register(modEventBus);
+        ExampleCatalogShops.CATALOG_SHOPS.register(modEventBus);
     }
 
     public static ResourceLocation resource(String path) {

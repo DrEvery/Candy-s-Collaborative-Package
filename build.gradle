@@ -136,9 +136,9 @@ dependencies {
         exclude group: "imgui"
     }
 
-    implementation("blank:ffpackage-${minecraft_version}:0.2")
+    implementation("blank:ffpackage-${minecraft_version}:0.3")
 
-    implementation("foundry.veil:veil-neoforge-${minecraft_version}:1.0.0.238") {
+    implementation("foundry.veil:veil-neoforge-${minecraft_version}:1.3.0") {
         exclude group: "maven.modrinth"
         exclude group: "me.fallenbreath"
     }
