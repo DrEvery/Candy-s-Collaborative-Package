@@ -1,11 +1,9 @@
 package net.mudhut.example_addon;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Items;
-import net.mudhut.ffpackage.registries.FFPItemRegistry;
+import net.mudhut.ffpackage.registries.FFPItems;
 import net.mudhut.ffpackage.registries.FFPRegistries;
 import net.mudhut.ffpackage.server.purchase.PurchaseSys;
-import net.mudhut.ffpackage.util.CatalogTab;
 import net.mudhut.ffpackage.util.CatalogTabShop;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -26,7 +24,7 @@ public class ExampleCatalogShops {
                 arr.add(PurchaseSys.createItem(ExampleItemRegistry.BAG_FREDDY_TORSO, 2, 4, "Example shop item that gives 4 items"));
                 arr.add(PurchaseSys.createItem(ExampleItemRegistry.BAG_FREDDY_LEGS, 3, "Example shop item"));
                 arr.add(PurchaseSys.createItem(ExampleItemRegistry.BAG_FREDDY_FEET, 4, "Example shop item"));
-                arr.add(PurchaseSys.createItem(FFPItemRegistry.RUBY, 5, "Example existing item"));
+                arr.add(PurchaseSys.createItem(FFPItems.RUBY, 5, "Example existing item"));
             })
             .build());
 

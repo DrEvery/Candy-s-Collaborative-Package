@@ -1,5 +1,6 @@
 package net.mudhut.example_addon;
 
+import net.minecraft.resources.ResourceLocation;
 import net.mudhut.ffpackage.registries.FFPRegistries;
 import net.mudhut.ffpackage.util.AnimatronicSuit;
 import net.neoforged.neoforge.registries.DeferredRegister;

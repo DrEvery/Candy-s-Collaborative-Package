@@ -3,7 +3,7 @@ package net.mudhut.example_addon;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.mudhut.ffpackage.client.model.suit.AnimatronicClassicSuitModel;
+import net.mudhut.ffpackage.client.model.classic_suits.AnimatronicClassicSuitModel;
 import net.mudhut.ffpackage.level.entity.Endo01;
 
 // Your animatronic suit model, make sure you include the ear groups, even if
