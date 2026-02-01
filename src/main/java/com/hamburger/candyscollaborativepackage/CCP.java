@@ -1,4 +1,4 @@
-package net.mudhut.example_addon;
+package com.hamburger.candyscollaborativepackage;
 
 import net.minecraft.resources.ResourceLocation;
 import net.refractionapi.refraction.helper.clazz.RModRegistrar;
@@ -10,18 +10,18 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
 
-@Mod(FFPExample.MODID)
-public class FFPExample {
-    public static final String MODID = "ffp_example_addon";
+@Mod(CCP.MODID)
+public class CCP {
+    public static final String MODID = "ccp";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public FFPExample(IEventBus modEventBus, ModContainer modContainer) {
+    public CCP(IEventBus modEventBus, ModContainer modContainer) {
         RModRegistrar.registerSelf(MODID);
         modEventBus.register(Registry.class);
-        ExampleSuitRegistry.SUITS.register(modEventBus);
-        ExampleItemRegistry.ITEMS.register(modEventBus);
-        ExampleCatalogTabs.CATALOG_TABS.register(modEventBus);
-        ExampleCatalogShops.CATALOG_SHOPS.register(modEventBus);
+        CCPSuitRegistry.SUITS.register(modEventBus);
+        CCPItemRegistry.ITEMS.register(modEventBus);
+        CCPCatalogTabs.CATALOG_TABS.register(modEventBus);
+        CCPCatalogShops.CATALOG_SHOPS.register(modEventBus);
     }
 
     public static ResourceLocation resource(String path) {

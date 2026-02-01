@@ -1,4 +1,4 @@
-package net.mudhut.example_addon;
+package com.hamburger.candyscollaborativepackage;
 
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;

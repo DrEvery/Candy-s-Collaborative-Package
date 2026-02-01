@@ -1,4 +1,4 @@
-package net.mudhut.example_addon;
+package com.hamburger.candyscollaborativepackage;
 
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.core.Holder;
@@ -17,6 +17,6 @@ public class BagFreddySuitItem extends PlushSuitItem implements IPlushSuit {
 
     @Override
     public Function<EntityModelSet, Object> getModel() {
-        return set -> new BAGFreddySuitModel<>(set.bakeLayer(ExampleModelLayers.BAG_FREDDY));
+        return set -> new BAGFreddySuitModel<>(set.bakeLayer(CCPModelLayers.BAG_FREDDY));
     }
 }
