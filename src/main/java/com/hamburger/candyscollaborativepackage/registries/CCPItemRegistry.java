@@ -1,5 +1,7 @@
-package com.hamburger.candyscollaborativepackage;
+package com.hamburger.candyscollaborativepackage.registries;
 
+import com.hamburger.candyscollaborativepackage.level.item.suit.BagFreddySuitItem;
+import com.hamburger.candyscollaborativepackage.CCP;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.mudhut.ffpackage.util.FFPArmorMaterials;
@@ -11,7 +13,7 @@ import java.util.function.Supplier;
 public class CCPItemRegistry {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CCP.MODID);
 
-    // Example registries for suit pieces
+    //Replace with Rat when you have model and textures :D
     public static final DeferredItem<Item> BAG_FREDDY_HEAD = register("bag_freddy_head", () ->
             new BagFreddySuitItem(CCPSuitRegistry.BAG_FREDDY_SUIT, FFPArmorMaterials.CLASSIC_FREDDY_SUIT,
                     ArmorItem.Type.HELMET, new Item.Properties()));

@@ -1,5 +1,7 @@
-package com.hamburger.candyscollaborativepackage;
+package com.hamburger.candyscollaborativepackage.registries;
 
+import com.hamburger.candyscollaborativepackage.client.model.BAGFreddySuitModel;
+import com.hamburger.candyscollaborativepackage.CCP;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

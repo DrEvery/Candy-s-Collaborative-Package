@@ -1,5 +1,7 @@
-package com.hamburger.candyscollaborativepackage;
+package com.hamburger.candyscollaborativepackage.level.item.suit;
 
+import com.hamburger.candyscollaborativepackage.client.model.BAGFreddySuitModel;
+import com.hamburger.candyscollaborativepackage.registries.CCPModelLayers;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.core.Holder;
 import net.minecraft.world.item.ArmorMaterial;

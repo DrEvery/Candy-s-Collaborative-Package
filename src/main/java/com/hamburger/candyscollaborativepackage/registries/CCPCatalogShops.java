@@ -1,6 +1,8 @@
-package com.hamburger.candyscollaborativepackage;
+package com.hamburger.candyscollaborativepackage.registries;
 
+import com.hamburger.candyscollaborativepackage.CCP;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.mudhut.ffpackage.registries.FFPItems;
 import net.mudhut.ffpackage.registries.FFPRegistries;
 import net.mudhut.ffpackage.server.purchase.PurchaseSys;
@@ -15,16 +17,9 @@ public class CCPCatalogShops {
     public static final DeferredRegister<CatalogTabShop> CATALOG_SHOPS =
             DeferredRegister.create(FFPRegistries.TAB_SHOPS, CCP.MODID);
 
-    public static final Supplier<CatalogTabShop> EXAMPLE_SHOP = register("example_shop", (builder) -> builder
-            .title(Component.literal("Example Shop"))
-            // You can add custom tab sprites! Use the base mod tab sprite as a base :)
-            //.tabSprite(FFPExample.resource("catalog/catalog_shop_blue_unselected"), FFPExample.resource("catalog/catalog_shop_blue_selected"))
+    public static final Supplier<CatalogTabShop> ROWBOATICS_CORP = register("rowboatics_corp", (builder) -> builder
+            .title(Component.literal("Rowboatics Corp"))
             .shopItems((arr) -> {
-                arr.add(PurchaseSys.createItem(CCPItemRegistry.BAG_FREDDY_HEAD, 1, "Example shop item"));
-                arr.add(PurchaseSys.createItem(CCPItemRegistry.BAG_FREDDY_TORSO, 2, 4, "Example shop item that gives 4 items"));
-                arr.add(PurchaseSys.createItem(CCPItemRegistry.BAG_FREDDY_LEGS, 3, "Example shop item"));
-                arr.add(PurchaseSys.createItem(CCPItemRegistry.BAG_FREDDY_FEET, 4, "Example shop item"));
-                arr.add(PurchaseSys.createItem(FFPItems.RUBY, 5, "Example existing item"));
             })
             .build());
 

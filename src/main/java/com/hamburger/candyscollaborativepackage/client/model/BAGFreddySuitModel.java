@@ -1,4 +1,4 @@
-package com.hamburger.candyscollaborativepackage;
+package com.hamburger.candyscollaborativepackage.client.model;
 
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;

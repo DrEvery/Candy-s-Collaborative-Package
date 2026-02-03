@@ -1,5 +1,6 @@
 package com.hamburger.candyscollaborativepackage;
 
+import com.hamburger.candyscollaborativepackage.registries.*;
 import net.minecraft.resources.ResourceLocation;
 import net.refractionapi.refraction.helper.clazz.RModRegistrar;
 import org.slf4j.Logger;
@@ -22,6 +23,7 @@ public class CCP {
         CCPItemRegistry.ITEMS.register(modEventBus);
         CCPCatalogTabs.CATALOG_TABS.register(modEventBus);
         CCPCatalogShops.CATALOG_SHOPS.register(modEventBus);
+        CCPEntities.ENTITIES.register(modEventBus);
     }
 
     public static ResourceLocation resource(String path) {
