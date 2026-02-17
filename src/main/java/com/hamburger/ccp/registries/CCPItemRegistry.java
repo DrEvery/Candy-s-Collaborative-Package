@@ -4,6 +4,7 @@ import com.hamburger.ccp.level.item.suit.BagFreddySuitItem;
 import com.hamburger.ccp.CCP;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.mudhut.ffpackage.level.item.CPUItem;
 import net.mudhut.ffpackage.util.FFPArmorMaterials;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -26,6 +27,11 @@ public class CCPItemRegistry {
     public static final DeferredItem<Item> BAG_FREDDY_FEET = register("bag_freddy_feet", () ->
             new BagFreddySuitItem(CCPSuitRegistry.BAG_FREDDY_SUIT, FFPArmorMaterials.CLASSIC_FREDDY_SUIT,
                     ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final DeferredItem<Item> SERVICE_CPU = register("service_cpu", () ->
+            new CPUItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> WAITER_CPU = register("waiter_cpu", () ->
+            new CPUItem(new Item.Properties().stacksTo(1)));
 
     public static DeferredItem<Item> register(String name, Supplier<Item> item) {
         return ITEMS.register(name, item);

@@ -1,30 +1,48 @@
 package com.hamburger.ccp.client.gui;
 
-import com.hamburger.ccp.level.entity.ThePenguin;
 import com.hamburger.ccp.registries.CCPMenuTypes;
-import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.Container;
+import com.hamburger.ccp.world.inventory.PenguinContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import net.mudhut.ffpackage.level.item.CPUItem;
 
 public class PenguinConfigMenu extends AbstractContainerMenu {
     public int containerId;
-    public Container penguinContainer;
-    public ThePenguin penguin;
+    public PenguinContainer penguinContainer;
+    public Inventory playerInventory;
 
-    public PenguinConfigMenu(int containerId, Container penguinContainer, RegistryFriendlyByteBuf extraData) {
-        super(CCPMenuTypes.PENGUIN_CONFIG.get(), containerId);
-        this.containerId = containerId;
-        this.penguinContainer = penguinContainer;
-        this.addSlot(new Slot(this.penguinContainer, 0, 640, 480));
-    }
-
+    //Client Constructor
     public PenguinConfigMenu(int containerId, Inventory inventory, Player player) {
         super(CCPMenuTypes.PENGUIN_CONFIG.get(), containerId);
+
+    }
+
+    //Server Constructor
+    public PenguinConfigMenu(int containerId, Inventory playerInventory) {
+        super(CCPMenuTypes.PENGUIN_CONFIG.get(), containerId);
+        this.containerId = containerId;
+        this.playerInventory = playerInventory;
+        this.penguinContainer = new PenguinContainer();
+
+        this.addSlot(new Slot(penguinContainer, 0, 3, 30){
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return stack.getItem() instanceof CPUItem && !this.hasItem();
+            }
+        });
+
+        for(int i = 0; i < 3; ++i) {
+            for(int l = 0; l < 9; ++l) {
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 84 + i * 18));
+            }
+        }
+
+        for(int i = 0; i < 9; ++i) {
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
+        }
     }
 
     @Override

@@ -17,7 +17,7 @@ public class CCPCatalogTabs {
 
     public static final Supplier<CatalogTab> CTC_ENTERTAINMENT = CATALOG_TABS.register("ctc_entertainment", () -> CatalogTab.builder()
             .displayName(Component.literal("CTC Entertainment"))
-            .icon(() -> new ItemStack(Items.STICK.asItem()))
+            .icon(() -> new ItemStack(CCPItemRegistry.SERVICE_CPU.asItem()))
             .tabShops(output -> {
                 output.accept(CCPCatalogShops.ROWBOATICS_CORP);
             }).build());
