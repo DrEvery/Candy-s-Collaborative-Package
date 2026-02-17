@@ -1,8 +1,11 @@
 {
-  "item.ffp_example_addon.bag_freddy_head": "B&G Freddy Head",
-  "item.ffp_example_addon.bag_freddy_torso": "B&G Freddy Torso",
-  "item.ffp_example_addon.bag_freddy_legs": "B&G Freddy Legs",
-  "item.ffp_example_addon.bag_freddy_feet": "B&G Freddy Feet",
+  "item.ccp.bag_freddy_head": "B&G Freddy Head",
+  "item.ccp.bag_freddy_torso": "B&G Freddy Torso",
+  "item.ccp.bag_freddy_legs": "B&G Freddy Legs",
+  "item.ccp.bag_freddy_feet": "B&G Freddy Feet",
+  "item.ccp.service_cpu": "Service CPU",
+  "item.ccp.waiter_cpu": "Waiter CPU",
 
+  "itemGroup.ccp.ccp_tab": "Candy's Collaborative Package",
   "menu.ccp.penguinconfig": ""
 }

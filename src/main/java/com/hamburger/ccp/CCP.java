@@ -27,6 +27,7 @@ public class CCP {
         CCPEntities.ENTITIES.register(modEventBus);
         CCPBlocks.BLOCKS.register(modEventBus);
         CCPBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        CCPCreativeTabs.CREATIVE_TABS.register(modEventBus);
     }
 
     public static ResourceLocation resource(String path) {

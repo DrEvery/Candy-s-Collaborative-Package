@@ -1,7 +1,7 @@
 package com.hamburger.ccp.client.gui;
 
 import com.hamburger.ccp.registries.CCPMenuTypes;
-import com.hamburger.ccp.world.inventory.PenguinContainer;
+import com.hamburger.ccp.world.inventory.CPUContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -11,7 +11,7 @@ import net.mudhut.ffpackage.level.item.CPUItem;
 
 public class PenguinConfigMenu extends AbstractContainerMenu {
     public int containerId;
-    public PenguinContainer penguinContainer;
+    public CPUContainer CPUContainer;
     public Inventory playerInventory;
 
     //Client Constructor
@@ -25,9 +25,9 @@ public class PenguinConfigMenu extends AbstractContainerMenu {
         super(CCPMenuTypes.PENGUIN_CONFIG.get(), containerId);
         this.containerId = containerId;
         this.playerInventory = playerInventory;
-        this.penguinContainer = new PenguinContainer();
+        this.CPUContainer = new CPUContainer();
 
-        this.addSlot(new Slot(penguinContainer, 0, 3, 30){
+        this.addSlot(new Slot(CPUContainer, 0, 80, -29){
             @Override
             public boolean mayPlace(ItemStack stack) {
                 return stack.getItem() instanceof CPUItem && !this.hasItem();

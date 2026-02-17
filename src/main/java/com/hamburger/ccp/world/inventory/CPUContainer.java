@@ -6,10 +6,10 @@ import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
-public class PenguinContainer implements Container {
+public class CPUContainer implements Container {
     public NonNullList<ItemStack> itemStack;
 
-    public PenguinContainer() {
+    public CPUContainer() {
         this.itemStack = NonNullList.withSize(1, ItemStack.EMPTY);
     }
 
